@@ -1,0 +1,1 @@
+mvn --file ../database/pom.xml -e clean package -Pdatabase-changelog -Pdatabase.driver=org.postgresql.Driver -Pdatabase.url=jdbc:postgresql://127.0.0.1:5432/calendar -Pdatabase.username=postgres -Pdatabase.password=admin
