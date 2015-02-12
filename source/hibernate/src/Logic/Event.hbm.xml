@@ -1,0 +1,15 @@
+<hibernate-mapping>
+    <class name ="Logic.Event" table="events">
+        <id column="event_id" name="event_id" type="java.util.UUID">
+            <generator class="increment"/>
+        </id>
+        <property column="event_theme" name="event_theme" type="java.lang.String"/>
+        <property column="event_descr" name="event_descr" type="java.lang.String"/>
+        <property column="linked_user_id" name="linked_user_id" type="java.lang.UUID"/>
+
+        <set name="events" table="events" lazy="false">
+            <key column="event_id"/>
+            <one-to-many column="linked_user_id" class="Logic.User"/>
+        </set>
+    </class>
+</hibernate-mapping>
