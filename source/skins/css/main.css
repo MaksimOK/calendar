@@ -170,6 +170,13 @@ h1{
     border-bottom-color: rgba(255,255,255,0.4);
 }
 
+@media all and (max-width: 1200px){
+.area{width: 728px;}
+.title { width: 748px;}
+.rightbar { width: 750px;}
+#wrapper {width: 1000px;}
+}
+
 .area:focus {
 	outline: none;
 	border: 1px solid rgba(151,202,242,0.9);
